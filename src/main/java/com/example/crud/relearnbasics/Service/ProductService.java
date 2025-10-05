@@ -11,6 +11,6 @@ public interface ProductService {
     ProductEntity updateProduct(ProductEntity product,long id);
     void deleteProduct(long id);
     List<ProductEntity> getAllProductSorted();
-    List<ProductEntity> findBySearchText(String searchText);
+    // List<ProductEntity> findBySearchText(String searchText);
 }
 

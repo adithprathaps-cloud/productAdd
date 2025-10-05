@@ -44,8 +44,8 @@ public class ProductServiceImpl implements ProductService {
         return null;
     }
 
-    @Override
-    public List<ProductEntity> findBySearchText(String searchText) {
-        return productDataRepository.findBySearchText(searchText);
-    }
+    // @Override
+    // public List<ProductEntity> findBySearchText(String searchText) {
+    //     return productDataRepository.findBySearchText(searchText);
+    // }
 }

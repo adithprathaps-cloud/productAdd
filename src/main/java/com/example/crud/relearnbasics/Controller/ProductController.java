@@ -46,12 +46,22 @@ public class ProductController {
         return productService.getAllProductSorted();
     }
         
-    @GetMapping("/search")
-    public ResponseEntity<List<ProductEntity>>findBySearchText(@RequestParam String searchText){
-        List<ProductEntity> foundProducts=productService.findBySearchText(searchText);
-        if(!foundProducts.isEmpty())
-            return ResponseEntity.ok(foundProducts);
-        else
-            return ResponseEntity.noContent().build();
-    }
+    // @GetMapping("/search")
+    // public ResponseEntity<List<ProductEntity>>findBySearchText(@RequestParam String searchText){
+    //     List<ProductEntity> foundProducts=productService.findBySearchText(searchText);
+    //     if(!foundProducts.isEmpty())
+    //         return ResponseEntity.ok(foundProducts);
+    //     else
+    //         return ResponseEntity.noContent().build();
+    // }
 }
+
+
+//@RequestMapping("/erp/api/products") = base path for all endpoints in this controller.
+/*
+Each method in this controller adds its own specific path on top of the base path "/erp/api/products".
+For example:
+- @GetMapping("{id}") maps to "/erp/api/products/{id}"
+- @PostMapping maps to "/erp/api/products"
+- @GetMapping("/search") maps to "/erp/api/products/search"
+*/
